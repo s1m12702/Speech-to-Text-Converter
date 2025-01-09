@@ -17,7 +17,7 @@ def recognize_from_file(file, progress):
                 progress.progress(50 + (i + 1) * 5)  # Update from 50% to 100%
 
             audio = recognizer.record(source)  # Read the entire audio file
-            text = recognizer.recognize(audio)
+            text = recognizer.recognize_google(audio)
             progress.progress(100)  # Complete progress bar
             return f"File Transcription:\n{text}"
     except sr.UnknownValueError:
@@ -35,7 +35,7 @@ def recognize_speech_live():
         while True:
             try:
                 audio = recognizer.listen(source)
-                text = recognizer.recognize(audio).lower()
+                text = recognizer.recognize_google(audio).lower()
                 if text == "stop":
                     return "Listening stopped."
                 else:

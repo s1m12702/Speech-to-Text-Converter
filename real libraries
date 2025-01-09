@@ -1,0 +1,8 @@
+Librariile care sunt folosite sunt:
+streamlit
+speech_recognition
+tempfile
+os
+time
+
+Restul care sunt in plus au fost folosite pentru ca am incercat sa aduc anumite modificari care nu au mers si nu am mai reusit sa le sterg
